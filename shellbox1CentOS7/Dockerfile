@@ -1,7 +1,7 @@
 FROM centos:centos7
 
-RUN yum update
+RUN yum -y update
 
-EXPOSE 22 80 443
+EXPOSE 22 80
 
 CMD ["bash"]
