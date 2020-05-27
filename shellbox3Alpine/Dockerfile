@@ -1,7 +1,9 @@
 FROM alpine
 
-RUN apk update
+RUN apk update && apk add nginx
+
+COPY files/index.html /usr/share/nginx/html/
 
 EXPOSE 22 80
 
-CMD ["bash"]
+CMD ["nginx", "-g", "daemon off;"]
